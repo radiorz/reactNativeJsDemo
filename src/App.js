@@ -1,5 +1,6 @@
 import React from 'react';
-import {StatusBar, SafeAreaView, View, Text, StyleSheet} from 'react-native';
+import {StatusBar, View, Text, StyleSheet} from 'react-native';
+import {SafeAreaProvider} from 'react-native-safe-area-context';
 import {useTailwind, TailwindProvider} from 'tailwind-rn';
 import utilities from '../tailwind.json';
 
@@ -8,7 +9,7 @@ function App() {
   return (
     <>
       {/* <StatusBar /> */}
-      <SafeAreaView style={styles.container}>
+      <SafeAreaProvider style={styles.container}>
         {/* 头部 */}
         <View
           style={{
@@ -23,7 +24,7 @@ function App() {
         </View>
         {/* 底部 */}
         <View style={styles.footer} />
-      </SafeAreaView>
+      </SafeAreaProvider>
     </>
   );
 }
