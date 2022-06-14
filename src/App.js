@@ -1,21 +1,26 @@
 import React from 'react';
 import {StatusBar, SafeAreaView, View, Text, StyleSheet} from 'react-native';
-import {TailwindProvider} from 'tailwind-rn';
-import {utilities} from '../tailwind.json';
-import Home from './pages/Home';
+import {useTailwind, TailwindProvider} from 'tailwind-rn';
+import utilities from '../tailwind.json';
 
 function App() {
+  const tailwind = useTailwind();
   return (
     <>
       {/* <StatusBar /> */}
       <SafeAreaView style={styles.container}>
         {/* 头部 */}
-        <View style={styles.header}>
-          <Text>Matching Game</Text>
+        <View
+          style={{
+            ...tailwind('flex-1 bg-gray-100 justify-center items-center'),
+          }}>
+          {/* 头部文字 */}
+          <Text style={{...tailwind('font-bold text-3xl')}}>Matching Game</Text>
         </View>
-        {/* 主要成分 */}
-        {/* <View style={styles.main} /> */}
-        <Home />
+        {/* main部分 */}
+        <View style={styles.main}>
+          <Text>123</Text>
+        </View>
         {/* 底部 */}
         <View style={styles.footer} />
       </SafeAreaView>
@@ -35,10 +40,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   heading: {
-    fontSize: 32,
-    fontWeight: 'bold',
-    justifyContent: 'center',
-    alignItems: 'center',
+    // fontSize: 32,
+    // fontWeight: 'bold',
+    // justifyContent: 'center',
+    // alignItems: 'center',
   },
   main: {
     flex: 3,
