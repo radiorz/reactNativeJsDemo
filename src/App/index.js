@@ -13,6 +13,9 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Header from '~/components/NavigatorHeader';
 import MatchingGame from '~/screens/MatchingGame';
 import Home from '~/screens/HomeScreen';
+import AppHeader from '~/components/AppHeader';
+import {store} from '~/store';
+import {Provider} from 'react-redux';
 
 const Root = createNativeStackNavigator();
 
@@ -20,12 +23,13 @@ function App() {
   return (
     <>
       <SafeAreaProvider style={styles.container}>
+        <AppHeader />
         <NavigationContainer>
           <Root.Navigator
             screenOptions={{
               header: props => <Header headerProps={props} />,
             }}
-            initialRouteName="MatchingGame">
+            initialRouteName="Home">
             <Root.Screen
               options={{headerShown: false}}
               name="Home"
@@ -51,10 +55,12 @@ const theme = createTheme({
   },
 });
 const TheApp = () => (
-  <TailwindProvider utilities={utilities}>
-    <ThemeProvider theme={theme}>
-      <App />
-    </ThemeProvider>
-  </TailwindProvider>
+  <Provider store={store}>
+    <TailwindProvider utilities={utilities}>
+      <ThemeProvider theme={theme}>
+        <App />
+      </ThemeProvider>
+    </TailwindProvider>
+  </Provider>
 );
 export default TheApp;
