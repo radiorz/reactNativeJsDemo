@@ -18,5 +18,8 @@
     "titleBar.inactiveBackground": "#16324599",
     "titleBar.inactiveForeground": "#e7e7e799"
   },
-  "peacock.color": "#163245"
+  "peacock.color": "#163245",
+  "i18n-ally.localesPaths": ["./src/locales"],
+  "cSpell.words": ["Pressable", "VIMP", "voerka", "webapi"],
+  "i18n-ally.keystyle": "nested"
 }

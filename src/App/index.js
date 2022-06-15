@@ -16,7 +16,6 @@ import Home from '~/screens/HomeScreen';
 import AppHeader from '~/components/AppHeader';
 import {store} from '~/store';
 import {Provider} from 'react-redux';
-
 const Root = createNativeStackNavigator();
 
 function App() {
