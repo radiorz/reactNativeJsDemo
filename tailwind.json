@@ -4,6 +4,16 @@
 			"display": "flex"
 		}
 	},
+	"h-5": {
+		"style": {
+			"height": 20
+		}
+	},
+	"h-10": {
+		"style": {
+			"height": 40
+		}
+	},
 	"flex-1": {
 		"style": {
 			"flexGrow": 1,
@@ -21,22 +31,28 @@
 			"justifyContent": "center"
 		}
 	},
-	"bg-gray-100": {
-		"style": {
-			"--tw-bg-opacity": 1,
-			"backgroundColor": "rgb(243 244 246 / var(--tw-bg-opacity))"
-		}
-	},
 	"bg-white": {
 		"style": {
 			"--tw-bg-opacity": 1,
 			"backgroundColor": "rgb(255 255 255 / var(--tw-bg-opacity))"
 		}
 	},
+	"text-2xl": {
+		"style": {
+			"fontSize": 24,
+			"lineHeight": 32
+		}
+	},
 	"text-3xl": {
 		"style": {
 			"fontSize": 30,
 			"lineHeight": 36
+		}
+	},
+	"text-xl": {
+		"style": {
+			"fontSize": 20,
+			"lineHeight": 28
 		}
 	},
 	"font-bold": {
